@@ -1,0 +1,42 @@
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+.env/
+venv/
+
+# Packaging build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test output & coverage
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.pytest_cache/
+
+# IDEs & editors
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data / corpora (will be downloaded locally, not committed)
+tests/data/*.pdf
+tests/data/*_expected.json
+
+# Secrets
+.env 
