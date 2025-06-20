@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+resume_reader/__init__.py
+resume_reader/classification.py
+resume_reader/cli.py
+resume_reader/parser.py
+resume_reader/schema.py
+resume_reader/segmentation.py
+resume_reader/text_extraction.py
+resume_reader.egg-info/PKG-INFO
+resume_reader.egg-info/SOURCES.txt
+resume_reader.egg-info/dependency_links.txt
+resume_reader.egg-info/entry_points.txt
+resume_reader.egg-info/requires.txt
+resume_reader.egg-info/top_level.txt
+tests/test_cli.py

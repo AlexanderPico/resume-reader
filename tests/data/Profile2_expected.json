@@ -1,0 +1,15 @@
+{
+  "personal": {
+    "full_name": null,
+    "email": null,
+    "phone": null,
+    "location": null
+  },
+  "experience": [],
+  "education": [],
+  "skills": [],
+  "certifications": null,
+  "awards": null,
+  "confidence": 0.0,
+  "needs_review": true
+}

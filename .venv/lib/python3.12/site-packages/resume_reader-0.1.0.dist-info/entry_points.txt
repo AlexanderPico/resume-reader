@@ -1,0 +1,2 @@
+[console_scripts]
+resume-reader = resume_reader.cli:app

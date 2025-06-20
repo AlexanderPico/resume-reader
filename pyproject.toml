@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resume-reader"
+version = "0.1.0"
+description = "Offline résumé/CV PDF parser that outputs structured JSON."
+authors = [
+    {name = "Open Source Contributors", email = "nothanks@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pdfplumber>=0.10",
+    "pydantic>=2.3",
+    "click>=8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/alexanderpico/resume-reader"
+
+[project.scripts]
+resume-reader = "resume_reader.cli:app"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.1.0",
+    "isort>=5.10.0",
+]
+
+[tool.setuptools]
+packages = ["resume_reader"]
+include-package-data = true
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black" 
