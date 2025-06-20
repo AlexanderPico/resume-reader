@@ -4,6 +4,8 @@ pyproject.toml
 resume_reader/__init__.py
 resume_reader/classification.py
 resume_reader/cli.py
+resume_reader/details.py
+resume_reader/experience.py
 resume_reader/parser.py
 resume_reader/schema.py
 resume_reader/segmentation.py
@@ -15,3 +17,4 @@ resume_reader.egg-info/entry_points.txt
 resume_reader.egg-info/requires.txt
 resume_reader.egg-info/top_level.txt
 tests/test_cli.py
+tests/test_parser_samples.py

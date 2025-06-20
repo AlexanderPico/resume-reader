@@ -14,10 +14,10 @@ class Personal(BaseModel):
 class ExperienceItem(BaseModel):
     title: Optional[str] = None
     company: Optional[str] = None
+    location: Optional[str] = None
     start: Optional[str] = Field(None, description="ISO date or year e.g. 2020-05")
     end: Optional[str] = Field(None, description="ISO date, year, or 'Present'")
-    location: Optional[str] = None
-    description: Optional[str] = None
+    summary: Optional[str] = None
 
 
 class EducationItem(BaseModel):
