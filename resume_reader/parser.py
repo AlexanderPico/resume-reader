@@ -6,7 +6,7 @@ from typing import Union
 from .schema import Resume
 from .text_extraction import extract_text
 from .segmentation import segment_sections
-from .classification import classify_sentences
+from .details import extract_personal
 
 
 DEFAULT_CONFIDENCE_THRESHOLD = 0.75
@@ -30,12 +30,20 @@ def parse(pdf_path: Union[str, Path]) -> Resume:
 
     raw_text = extract_text(pdf_path)
     sections = segment_sections(raw_text)
-    labeled = classify_sentences(sections)
 
-    # TODO: deterministic slot filling
-    resume = Resume()
+    # --- rule-based personal info & confidence --------------------------------
+    personal, personal_conf = extract_personal(raw_text)
 
-    # For MVP, mark as needing review
-    resume.needs_review = True
-    resume.confidence = 0.0
+    # overall confidence: currently just personal_conf; will combine later
+    confidence = personal_conf
+
+    resume = Resume(
+        personal=personal,
+        experience=[],  # TODO: to be filled by heuristics/ML
+        education=[],
+        skills=[],
+        confidence=confidence,
+        needs_review=confidence < DEFAULT_CONFIDENCE_THRESHOLD,
+    )
+
     return resume 

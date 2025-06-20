@@ -44,8 +44,8 @@ class Resume(BaseModel):
     awards: Optional[List[str]] = None
 
     # Parser metadata
-    confidence: Optional[float] = Field(None, ge=0, le=1)
-    needs_review: bool = False
+    confidence: float = Field(0.0, ge=0.0, le=1.0, description="Overall extraction confidence 0–1")
+    needs_review: bool = Field(True, description="True if confidence below threshold or unresolved issues")
 
     model_config = {
         "title": "ResumeSchema",

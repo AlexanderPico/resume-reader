@@ -27,7 +27,8 @@ Baseline repository layout and plumbing. (Target ✓ 2024-Q3)
 ## Milestone 1 – Baseline Improvements (📅 next)
 Incremental quality upgrades without ML.
 
-- [x] Replace placeholder PDFs with real public-domain résumés.
+- [x] Discover permissive open résumé corpora (HF + Europass).
+- [ ] Replace placeholder PDFs with real public-domain résumés (download helper stub ready).
 - [ ] Deterministic slot-filling for personal section (name, email, etc.).
 - [ ] Expand heading heuristics (e.g. *"Professional Experience"*, *"Research"*).
 - [ ] Confidence heuristic & "needs_review" toggle based on coverage.
