@@ -5,6 +5,13 @@ Tick boxes will be checked as they are completed via pull-requests.
 
 ---
 
+## Strategy Overview
+
+We follow a **hybrid pipeline**: strong heuristics first; lightweight ML modules gradually fill the gaps.  
+CLI flag `--ml off|auto|on` will toggle behaviour.
+
+---
+
 ## Milestone 0 – MVP Scaffold ✅
 Baseline repository layout and plumbing. (Target ✓ 2024-Q3)
 
@@ -26,6 +33,9 @@ Incremental quality upgrades without ML.
 - [ ] Confidence heuristic & "needs_review" toggle based on coverage.
 - [ ] Expand tests to assert extracted values match ground-truth JSON.
 - [ ] Update documentation & examples.
+- [ ] Instrument heuristics to emit per-section confidence & coverage metrics.
+- [ ] Add `--ml` CLI flag (off/auto/on).
+- [ ] Log unknown headings/lines for corpus labelling.
 
 ---
 
@@ -37,6 +47,7 @@ Introduce lightweight, offline NLP models.
 - [ ] Fallback to heuristics when model confidence < τ.
 - [ ] Local HF cache management & opt-in ONNX runtime for speed.
 - [ ] Benchmarks: accuracy vs. heuristics on test corpus.
+- [ ] Implement cosine-similarity heading override using MiniLM embeddings.
 
 ---
 

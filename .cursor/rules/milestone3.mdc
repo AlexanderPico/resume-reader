@@ -1,0 +1,12 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Milestone 3 – Advanced Parsing
+
+- [ ] Parse & normalize date ranges → ISO 8601
+- [ ] Location normalization via offline gazetteer
+- [ ] Handle two-column layouts & tables
+- [ ] Europass & academic CV special-casing
+- [ ] Accurate awards/certifications extraction

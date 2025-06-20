@@ -1,0 +1,13 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Milestone 2 – ML Integration
+
+- [ ] Integrate MiniLM embeddings (sentence-transformers)
+- [ ] Implement cosine-similarity heading override
+- [ ] Train/fine-tune SetFit classifier for section labels
+- [ ] Heuristic fallback when classifier confidence < τ
+- [ ] Manage local HF cache & ONNX optimisation flag
+- [ ] Benchmarks: accuracy vs. heuristics (track in docs)

@@ -1,0 +1,16 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Milestone 1 – Baseline Improvements
+
+- [ ] Replace placeholder PDFs with real public-domain résumés
+- [ ] Deterministic slot-filling for personal section (name, email, phone, location)
+- [ ] Expand heading heuristics (incl. "Professional Experience", "Research")
+- [ ] Confidence heuristic & `needs_review` toggle based on coverage
+- [ ] Expanded tests with ground-truth JSON assertions
+- [ ] Documentation & examples update
+- [ ] Instrument heuristics to emit per-section confidence metrics
+- [ ] Add `--ml` CLI flag (off/auto/on)
+- [ ] Log unknown headings/lines for corpus labelling
