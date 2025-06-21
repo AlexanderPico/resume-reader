@@ -54,14 +54,29 @@ def parse(pdf_path: Union[str, Path], *, use_ml: bool = False) -> Resume:
 
     experience_lines = sections.get("experience", [])
 
-    # Fallback: if no "experience" section detected heuristically, attempt extraction from all lines
-    if not experience_lines:
-        experience_lines = raw_text
+    # ML vs heuristic extraction ------------------------------------------------
+    if use_ml:
+        try:
+            from .ml_experience import extract_experience_ml  # local import to avoid heavy dep when unused
 
-    # Education extraction temporarily disabled for iterative experience focus
+            # If classifier didn't detect an experience section, try full text
+            if not experience_lines:
+                experience_lines = raw_text
+
+            experience, exp_conf = extract_experience_ml(experience_lines)
+        except ImportError:
+            # ML deps missing – fallback to heuristics
+            if not experience_lines:
+                experience_lines = raw_text
+            experience, exp_conf = extract_experience(experience_lines)
+    else:
+        # Fallback: if no "experience" section detected heuristically, attempt extraction from all lines
+        if not experience_lines:
+            experience_lines = raw_text
+        experience, exp_conf = extract_experience(experience_lines)
+
+    # Education extraction (still heuristic; can add ML later) ------------------
     education_lines: list[str] = []
-
-    experience, exp_conf = extract_experience(experience_lines)
     education: list = []
     edu_conf = 0.0
 

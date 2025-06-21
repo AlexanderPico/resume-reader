@@ -1,0 +1,45 @@
+# Mapping of label names found in the raw corpora to a canonical
+# tag set we want to train on.
+# Left: as-appears in the JSON files (case-sensitive)
+# Right: canonical label used for spaCy training
+
+NAME: PERSON
+Name: PERSON
+
+EMAIL: EMAIL
+Email: EMAIL
+Email Address: EMAIL
+E-mail: EMAIL
+
+PHONE: PHONE
+Phone: PHONE
+Phone Number: PHONE
+
+Company: COMPANY
+COMPANY: COMPANY
+Companies worked at: COMPANY
+
+Designation: TITLE
+Designations: TITLE
+TITLE: TITLE
+Job Title: TITLE
+
+Degree: DEGREE
+DEGREE: DEGREE
+
+College Name: COLLEGE
+Institution: COLLEGE
+University: COLLEGE
+
+Job Specific Skill: SKILL
+Tech Tools: SKILL
+Skill: SKILL
+Skills: SKILL
+SKILL: SKILL
+
+Location: LOCATION
+LOC: LOCATION
+
+Years of Experience: DATE
+Graduation Year: DATE
+DATE: DATE 

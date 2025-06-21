@@ -22,7 +22,9 @@ These rules apply to all milestones unless a milestone-specific `.mdc` overrides
     When the assistant generates changes to the codebase, the assistant must implement the patch immediately in the same turn—no follow-up questions—unless essential information is missing. When the assistant has a plan for the next iteration, the assistant must implement the plan immediately in the same turn.
 
 - **Shell commands**
-    Provide bash commands **without inline `# comments`**—this applies to *single-line commands* and to *multi-line script blocks*. Put any explanation on separate lines before or after the code block, never on the same line as the command itself.
+    Provide zsh commands **without inline `# comments`**—this applies to *single-line commands* and to *multi-line script blocks*. Put any explanation on separate lines before or after the code block, never on the same line as the command itself.
+
+    If you can run the shell command yourself, especially if you are interested in the output (e.g., errors and console output), then you must execute the command yourself. Don't bother asking the user to do it.
 
 
 

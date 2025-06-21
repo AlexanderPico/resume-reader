@@ -1,0 +1,37 @@
+[1m
+============================ Data file validation ============================[0m
+[38;5;2m✔ Pipeline can be initialized with data[0m
+[38;5;2m✔ Corpus is loadable[0m
+[1m
+=============================== Training stats ===============================[0m
+Language: en
+Training pipeline: tok2vec, ner
+687 training docs
+77 evaluation docs
+[38;5;3m⚠ 23 training examples also in evaluation data[0m
+[38;5;3m⚠ Low number of examples to train a new pipeline (687)[0m
+It's recommended to use at least 2000 examples (minimum 100)
+[1m
+============================== Vocab & Vectors ==============================[0m
+[38;5;4mℹ 583921 total word(s) in the data (34622 unique)[0m
+10 most common words: ',' (34846), ' ' (32051), 'and' (18552), '.' (17891), ' '
+(12835), 'of' (9824), '-' (9031), 'the' (8796), '   ' (8604), 'to' (8322)
+[38;5;4mℹ No word vectors present in the package[0m
+[1m
+========================== Named Entity Recognition ==========================[0m
+[38;5;4mℹ 9 label(s)[0m
+0 missing value(s) (tokens with '-' label)
+Labels in train data: 'SKILL' (5965), 'TITLE' (3304), 'DATE' (2720), 'LOCATION'
+(2694), 'COMPANY' (2245), 'COLLEGE' (1300), 'DEGREE' (1097), 'PERSON' (872),
+'EMAIL' (634)
+[38;5;1m✘ 83 invalid whitespace entity spans[0m
+[38;5;2m✔ Good amount of examples for all labels[0m
+[38;5;2m✔ Examples without occurrences available for all labels[0m
+[38;5;2m✔ No entities crossing sentence boundaries[0m
+Entity spans consisting of or starting/ending with whitespace characters are
+considered invalid.
+[1m
+================================== Summary ==================================[0m
+[38;5;2m✔ 5 checks passed[0m
+[38;5;3m⚠ 2 warnings[0m
+[38;5;1m✘ 1 error[0m
